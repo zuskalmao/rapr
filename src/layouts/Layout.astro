@@ -1,0 +1,78 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Rapril - April's Most Depressing Memecoin" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--blood-red: #ff4747;
+		--dark-red: #cc0000;
+		--chart-red: #ff0000;
+		--paper-white: #f5f5f5;
+		--dark-bg: #161616;
+		--medium-gray: #333333;
+	}
+	
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	
+	html {
+		font-family: 'Roboto', system-ui, sans-serif;
+		background: var(--dark-bg);
+		color: var(--paper-white);
+		scroll-behavior: smooth;
+	}
+	
+	body {
+		min-height: 100vh;
+		overflow-x: hidden;
+	}
+	
+	h1, h2, h3 {
+		font-weight: 900;
+		line-height: 1.1;
+	}
+	
+	.text-gradient {
+		background: linear-gradient(to bottom, var(--blood-red), var(--dark-red));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		color: transparent;
+	}
+	
+	.container {
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1.5rem;
+	}
+	
+	.downtrend {
+		color: var(--chart-red);
+		font-weight: bold;
+	}
+</style>

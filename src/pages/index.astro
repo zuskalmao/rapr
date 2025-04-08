@@ -1,0 +1,284 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Rapril | April's Most Depressing Memecoin">
+	<main>
+		<header>
+			<div class="logo-container">
+				<h1 class="logo">R<span class="blink">_</span>PRIL</h1>
+				<p class="tagline">The Memecoin for <span class="downtrend">DOWN ONLY</span> Markets</p>
+			</div>
+		</header>
+		
+		<section class="hero">
+			<div class="container">
+				<div class="hero-content">
+					<h2 class="hero-title">Commemorating The Great <span class="text-gradient">April 2024 Bloodbath</span></h2>
+					<div class="hero-image">
+						<img src="/stocks-collapse.jpg" alt="Collapsed stocks and markets in April" />
+						<div class="image-overlay">
+							<span class="flashing-text">LIQUIDATED</span>
+						</div>
+					</div>
+					<p class="hero-description">When your portfolio is down bad, might as well buy a memecoin that celebrates the pain!</p>
+				</div>
+			</div>
+		</section>
+		
+		<section class="features">
+			<div class="container">
+				<div class="feature-grid">
+					<div class="feature-card">
+						<h3>🔻 Down Only</h3>
+						<p>The only coin guaranteed to follow market sentiment. When markets go down, we go down harder. It's a feature, not a bug!</p>
+					</div>
+					<div class="feature-card">
+						<h3>💸 Bagholders Anonymous</h3>
+						<p>Join thousands of other traders who bought the top and are coping with their losses one meme at a time.</p>
+					</div>
+					<div class="feature-card">
+						<h3>📉 Inverse Moon</h3>
+						<p>While others promise "to the moon," we're proudly drilling to the earth's core. Expectations properly managed!</p>
+					</div>
+					<div class="feature-card">
+						<h3>🧠 Copium Supply</h3>
+						<p>Built-in mechanisms to help you rationalize your investment decisions. "It's not a loss if you don't sell!"</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="cta">
+			<div class="container">
+				<div class="cta-content">
+					<h2>Ready to <span class="text-gradient">Commemorate Your Losses</span>?</h2>
+					<p>If you've already lost 50% of your portfolio this month, what's another 1%?</p>
+					<button class="buy-button">Buy $RAPRIL <span class="small-text">(At Your Own Risk)</span></button>
+					<p class="disclaimer">Not financial advice. Seriously, have you not suffered enough already?</p>
+				</div>
+			</div>
+		</section>
+		
+		<footer>
+			<p>$RAPRIL © 2024 | Burning value since April 1st | Made with 💔 by rekt traders</p>
+		</footer>
+	</main>
+</Layout>
+
+<style>
+	main {
+		width: 100%;
+		color: var(--paper-white);
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	
+	header {
+		padding: 2rem 0;
+		text-align: center;
+	}
+	
+	.logo-container {
+		display: inline-block;
+	}
+	
+	.logo {
+		font-size: 4rem;
+		font-weight: 900;
+		letter-spacing: -2px;
+		color: var(--blood-red);
+		margin-bottom: 0.5rem;
+	}
+	
+	.blink {
+		animation: blink-animation 1s steps(2, start) infinite;
+	}
+	
+	@keyframes blink-animation {
+		to {
+			visibility: hidden;
+		}
+	}
+	
+	.tagline {
+		font-size: 1.2rem;
+		font-style: italic;
+	}
+	
+	.hero {
+		padding: 2rem 0 4rem;
+	}
+	
+	.hero-content {
+		text-align: center;
+	}
+	
+	.hero-title {
+		font-size: 2.5rem;
+		margin-bottom: 2rem;
+	}
+	
+	.hero-image {
+		position: relative;
+		margin: 0 auto 2.5rem;
+		max-width: 800px;
+		border: 3px solid var(--blood-red);
+		border-radius: 4px;
+		overflow: hidden;
+		box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
+	}
+	
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	
+	.image-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(255, 0, 0, 0.2);
+	}
+	
+	.flashing-text {
+		font-size: 5rem;
+		font-weight: 900;
+		color: var(--blood-red);
+		transform: rotate(-15deg);
+		text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+		animation: flash 2s infinite;
+		opacity: 0.9;
+	}
+	
+	@keyframes flash {
+		0%, 49% {
+			opacity: 0.9;
+		}
+		50%, 100% {
+			opacity: 0;
+		}
+	}
+	
+	.hero-description {
+		font-size: 1.5rem;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+	
+	.features {
+		padding: 4rem 0;
+		background-color: var(--medium-gray);
+	}
+	
+	.feature-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+	
+	.feature-card {
+		background-color: var(--dark-bg);
+		border-radius: 8px;
+		padding: 2rem;
+		text-align: center;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+		transition: transform 0.3s ease;
+	}
+	
+	.feature-card:hover {
+		transform: translateY(-5px);
+	}
+	
+	.feature-card h3 {
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		color: var(--blood-red);
+	}
+	
+	.cta {
+		padding: 5rem 0;
+		text-align: center;
+	}
+	
+	.cta-content {
+		max-width: 700px;
+		margin: 0 auto;
+	}
+	
+	.cta h2 {
+		font-size: 2.5rem;
+		margin-bottom: 1.5rem;
+	}
+	
+	.cta p {
+		font-size: 1.3rem;
+		margin-bottom: 2rem;
+	}
+	
+	.buy-button {
+		background: linear-gradient(to right, var(--blood-red), var(--dark-red));
+		color: white;
+		font-size: 1.2rem;
+		font-weight: bold;
+		padding: 1rem 2rem;
+		border: none;
+		border-radius: 50px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		margin-bottom: 1rem;
+	}
+	
+	.buy-button:hover {
+		filter: brightness(1.2);
+		transform: translateY(-3px);
+		box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+	}
+	
+	.small-text {
+		font-size: 0.7rem;
+		opacity: 0.7;
+	}
+	
+	.disclaimer {
+		font-size: 0.9rem;
+		opacity: 0.7;
+		margin-top: 1rem;
+		font-style: italic;
+	}
+	
+	footer {
+		background-color: var(--dark-bg);
+		text-align: center;
+		padding: 2rem 0;
+		font-size: 0.9rem;
+		opacity: 0.7;
+		border-top: 1px solid var(--medium-gray);
+	}
+	
+	@media screen and (max-width: 768px) {
+		.logo {
+			font-size: 3rem;
+		}
+		
+		.hero-title,
+		.cta h2 {
+			font-size: 2rem;
+		}
+		
+		.hero-description,
+		.cta p {
+			font-size: 1.2rem;
+		}
+		
+		.flashing-text {
+			font-size: 3rem;
+		}
+	}
+</style>
